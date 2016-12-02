@@ -3,54 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gekozen verhaal</title>
+    <title>Uw gekozen verhaal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img class="logo" src="" alt="">
-            <h4>NS Verhalen</h4></a>
-        <nav>
-            <!-- Navigatie van de site-->
-            <ul>
-                <li><a href="">Mijn leeslijst</a></li>
-                <li><a href="aanmelden.html">Account</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-   
-    <article>
-     <h1>Beroemd</h1>
-    <span class="author">Molovich</span>
-    <div class="save-story">Verhaal Opslaan</div>
-    <input type="checkbox">
-        <img src="" alt="">
-        <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot fan van u’, roept hij. ‘Doe haar de groeten’, zeg ik en stap uit. Centraal Station. Ik duw mijn zoon voort. Hij slaapt. Zich onbewust van de last die er op zijn schouders rust. Zoon zijn van de grote Max J. Molovich. Je geeft het hem te doen. Het miezert een beetje en het waait. Ik stop mijn hoofd diep in mijn kraag. De mensen kijken om, ik zie ze smoezelen, ik hoor ze fluisteren. ‘Is dat niet..? Volgens mij is dat… Ja hoor, zeker weten, het is ‘m.’ Alsof het uitspreken van mijn naam in mijn nabijheid een doodzonde is. Anderen negeren zo achteloos mogelijk mijn aanwezigheid in het hier en nu. Als ik ergens kom, verandert alles. Die verandering, dat voel je. Het is een soort rusteloosheid die rond de mensen zoemt. Als een zwerm opgewonden bijen. Het vreemde is: ik weet niet meer hoe het voelt zonder die verandering. Ik ben op weg naar de Openbare Bibliotheek om Stijloefeningen van Raymond Queneau te lenen. Ik loop nu over een plank met aan weerszijden diepe bouwputten. ‘Molo!’, hoor ik iemand boven het gehei van de heipalen en het gedril van de drilboren uitschreeuwen. Ik kijk naar beneden en zie een groepje bouwvakkers naar me zwaaien. Ik zwaai terug. Ze lachen en geven elkaar high-fives.
-        </p>
-        <span class="date">Geplubiceerd op: 11 juli, 2011</span>
-    </article>
-    <h3>Reacties</h3>
-    <div class="create-comment">
-        <img class="current-user" src="" alt="">
-        <input type="text" placeholder="Voeg een reactie toe">
-        <input type="submit" value="Versturen" />
-    </div>
-    <div class="comments-wrapper">
-        <div class="comment">
-            <div class="comment-header">
-                <img class="comment-picture" src="" alt="">
-                <span class="comment-name">Jan</span>
-                <span class="comment-date">5 dagen geleden</span>
+    <header class="header">
+        <div class="header-container container">
+            <div class="logo__wrapper">
+                <a class="logolink" href="index.html">
+                    <img class="nslogo" src="img/nslogo.svg" height="20" width="52" alt="Logo Nederlandse Spoorwegen">
+                    <span class="logotitle">NS Verhalen</span>
+                </a>
             </div>
-            <p class="comment-content">Leuk verhaal!</p>
+            <nav class="nav">
+                <!-- Navigatie van de site-->
+                <ul>
+                    <li><a class="nav-icon nav-leeslijst" href=""><span class="hidden-mobile">Mijn leeslijst</span></a></li>
+                    <li><a class="nav-icon nav-account" href="inloggen.html"><span class="hidden-mobile">Account</span> </a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    <main class="main container">
+        <article class="article-body">
+            <h1 class="article-title">Beroemd</h1>
+            <h5 class="author">Door Molovich</h5>
+            <label class="save-article">
+                <input type="checkbox">Verhaal opslaan
+            </label>
+            <!--   <img src="" alt=""> -->
+            <p class="article-text">Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot fan van u’, roept hij. ‘Doe haar de groeten’, zeg ik en stap uit. Centraal Station. Ik duw mijn zoon voort. Hij slaapt. Zich onbewust van de last die er op zijn schouders rust. Zoon zijn van de grote Max J. Molovich. Je geeft het hem te doen. Het miezert een beetje en het waait. Ik stop mijn hoofd diep in mijn kraag. De mensen kijken om, ik zie ze smoezelen, ik hoor ze fluisteren. ‘Is dat niet..? Volgens mij is dat… Ja hoor, zeker weten, het is ‘m.’ Alsof het uitspreken van mijn naam in mijn nabijheid een doodzonde is. Anderen negeren zo achteloos mogelijk mijn aanwezigheid in het hier en nu. Als ik ergens kom, verandert alles. Die verandering, dat voel je. Het is een soort rusteloosheid die rond de mensen zoemt. Als een zwerm opgewonden bijen. Het vreemde is: ik weet niet meer hoe het voelt zonder die verandering. Ik ben op weg naar de Openbare Bibliotheek om Stijloefeningen van Raymond Queneau te lenen. Ik loop nu over een plank met aan weerszijden diepe bouwputten. ‘Molo!’, hoor ik iemand boven het gehei van de heipalen en het gedril van de drilboren uitschreeuwen. Ik kijk naar beneden en zie een groepje bouwvakkers naar me zwaaien. Ik zwaai terug. Ze lachen en geven elkaar high-fives.
+            </p>
+            <span class="date">Geplubiceerd op: <time datetime="2011-09-13">11 juli, 2011</time></span>
+        </article>
+        <section class="comment-section">
+            <h3>Reacties</h3>
+            <div class="create-comment">
+                <!-- <img class="current-user" src="" alt=""> -->
+                <input class="add-comment" type="text" placeholder="Voeg een reactie toe">
+                <input type="submit" value="Versturen" />
+            </div>
+            <div class="comments-wrapper">
+                <div class="comment">
+                    <div class="comment-header">
+                        <!--  <img class="comment-picture" src="" alt=""> -->
+                        <span class="comment-name">Jan</span>
+                        <span class="comment-date">5 dagen geleden</span>
+                    </div>
+                    <p class="comment-content">Leuk verhaal!</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-            <address>Copyright © 2016 NS</address> 
-            </footer>
+        <address>Copyright © 2016 NS</address>
+    </footer>
 </body>
 
 </html>
