@@ -1,69 +1,79 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Aanmelden</title>
+    <title>Registeren - NS Verhalen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="shortcut icon" href="img/nslogo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/reset.css">
+     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img class="logo" src="" alt="">
-            <h4>NS Verhalen</h4></a>
-        <nav>
-            <!-- Navigatie van de site-->
-            <ul>
-                <li><a href="">Mijn leeslijst</a></li>
-                <li><a href="aanmelden.html">Account</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Inloggen</h1>
-        <form>
-            <label>E-mail</label>
-            <input type="email" placeholder="john@doe.com" name="mail" required/>
-            <label>Wachtwoord</label>
-            <input type="password" placeholder="" name="password" required/>
-            <input type="submit" value="Inloggen" />
-<a href=""><span class="wachtwoord vergeten">Wachtwoord vergeten?</span></a>
-            </form>
-            <h4>Nog geen account?</h4>
+    <section class="register-parrent">
+        <header class="login-header">
            
-        <h1>Aanmelden</h1>
+                <a class="logolink" href="index.html">
+                    <img class="nslogo" src="img/nslogo.svg" height="20" width="52" alt="Logo Nederlandse Spoorwegen">
+                </a>
         
-        <form>
-            <fieldset>
-            <legend>Persoonlijke gegevens</legend>
-            <ul>
-             
-                <li><label>Volledige naam: *</label><input type="text" required/></li>            
-            <li><label>Straat: </label><input type="text" required/></li> 
-            <li><label>Postcode: </label><input type="text" required/></li> 
-            <li><label>Huisnummer: </label><input type="number" required/></li> 
-              <li><label>Telefoonnummer: </label><input type="tel" required/></li> 
+        </header>
+        <main class="register-wrapper">
+            <div class="register-main">
+                <div class="register-header">
+                    <div class="register-title">
+                        <h1>NS verhalen account aanmaken</h1>
+                        <p>Voer de volgende gegevens in om uw NS verhalen account aan te maken.</p>
+                    </div>
+                </div>
+                <div class="div register-form">
+                    <form>
+                        <fieldset>
+                            <legend>Persoonlijke gegevens</legend>
+                            <ul class="register-list">
+                                <li>
+                                    <label class="register-label">Volledige naam: </label>
+                                    <input type="text" required/>
+                                </li>
+                                         </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Inloggegevens</legend>
+                            <ul class="register-list">
+                                <li>
+                                    <label class="register-label">E-mailadres: </label>
+                                    <input type="email" name="mail" required/>
+                                </li>
+                                <li>
+                                    <label class="register-label">Wachtwoord: </label>
+                                    <input type="password" name="password" required/>
+                                </li>
+                                <li>
+                                    <label class="register-label">Bevestig Wachtwoord: </label>
+                                    <input type="password" name="password" required/>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                    <div class="register-buttons">
+                       
+                        <input class="register" type="submit" value="Aanmaken">
+                         <a class="cancelbutton" href="inloggen.html">Annuleren</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
 
-                </ul>
-      		</fieldset>
-
-      		<fieldset>
-                <legend>Account gegevens</legend>
-                <ul>
-                <li><label>E-mailadres: *</label><input type="email" name="mail" /></li>
-                <li><label>Wachtwoord: *</label><input type="password" name="password" /></li>
-                <li><label>Herhaal Wachtwoord: *</label><input type="password" name="password" /></li>
-                </ul>
-                   <input type="submit" value="Registreren">
-            </fieldset>   
-     
-        </form>
-
-
-
-    </main>
-    <footer>
-            <address>Copyright © 2016 NS</address> 
-            </footer>
+      <footer class="login-footer">
+        <ul class="list-inline">    
+        <li class="right-arrow">   Gebruiksvoorwaarden</li>
+        <li class="right-arrow">    Privacybeleid</li>
+        <li class="right-arrow">    Ondersteuning</li>
+        </ul>
+    </footer>
 </body>
 
 </html>

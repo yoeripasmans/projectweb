@@ -3,122 +3,217 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NS Verhalensite</title>
+    <title>NS Verhalen - Overzicht</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/nslogo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/superformreset.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
 </head>
 
 <body>
     <header>
-        <a href="index.html">
-            <img class="logo" src="" alt="NSlogo">
-            <h4>NS Verhalen</h4></a>
         <nav>
-            <!-- Navigatie van de site-->
+            <a class="logo" href="index.html">
+                <img class="nslogo" src="img/nslogo.svg" alt="Logo Nederlandse Spoorwegen">
+                <h3 class="logo-title">NS Verhalen</h3>
+            </a>
             <ul>
-                <li><a href="">Mijn leeslijst</a></li>
-                <li><a href="aanmelden.html">Account</a></li>
+                <li>
+                    <a class="nav-icon nav-search" href=""></a>
+                </li>
+                <li><a class="nav-icon nav-leeslijst" href="mijnleeslijst.html"><span class="hidden-mobile">Mijn leeslijst</span></a></li>
+                <li><a class="nav-icon nav-account" href="inloggen.html"><span class="hidden-mobile">Yoeri Pasmans</span> </a></li>
             </ul>
         </nav>
     </header>
-    <section>
-        <img src="" alt="">
-        <a href="verhaal.html"><h4>Lees meer</h4></a>
-    </section>
     <main>
-        <!-- Gebied waar alle content in staat -->
-        <section>
-            <div class="tobbar">
-                <h5>99 resultaten</h5>
-                <h5>Sorteren op:</h5>
-                <select>
-                    <option value="popular">Meest populair</option>
-                    <option value="date">Nieuw</option>
-                    <option value="title">Titel A-Z</option>
-                    <option value="aanbevolen">Aanbevolen voor mij</option>
-                </select>
+        <section class="banner">
+            <div class="banner-text">
+                <h1>"Dochter" door Max Molovich</h1>
+                <h4>Verhaal van de dag</h4>
+                <a href="twitter.html" class="right-arrow">Lees meer</a>
             </div>
-            <article>
-                <a href="verhaal.html">
-                    <img src="" alt="">
-                    <h3>Beroemd</h3>
-                    <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot fan van u’, roept hij. ‘Doe haar de groeten’, zeg ik en stap uit...</p>
-                </a>
-            </article>
-            <article>
-                <a href="verhaal.html">
-                    <img src="" alt="">
-                    <h3>Het gebrek</h3>
-                    <p>Het was in de omstreken van een gure februaridag rond het middaguur. Mijn zoon lag in zijn kinderwagen te slapen als een oude jamaicaan die teveel Rum achter de ontbrekende kiezen heeft...</p>
-                </a>
-            </article>
-            <article>
-                <a href="verhaal.html">
-                    <img src="" alt="">
-                    <h3>Vergezocht</h3>
-                    <p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn. Behalve om verder te reizen. Ik stap uit de bus, lijn 21. Van Geuzenveld naar Centraal Station. Mijn zoon slaapt in zijn kinderwagen. Eindelijk...</p>
-                </a>
-            </article>
+            <div class="close-banner"></div>
         </section>
-        <aside>
-            <!-- De filter functie-->
-            <input type="search" placeholder="Zoeken" />
-            <input type="submit" value="Zoeken" />
-            <h3>Filter</h3>
-            <form>
-                <fieldset>
-                    <legend>Thema</legend>
-                    <ul>
-                        <li>
-                            <label>Fictie</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Non-fictie</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Geloof</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Sport </label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Muziek</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label> Politiek</label>
-                            <input type="checkbox"> </li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Lengte verhaal</legend>
-                    <input type="range">
-                </fieldset>
-                <fieldset>
-                    <legend>Niveau</legend>
-                    <ul>
-                        <li>
-                            <label>Kinderen</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Jeugd</label>
-                            <input type="checkbox">
-                        </li>
-                        <li>
-                            <label>Volwassenen</label>
-                            <input type="checkbox">
-                        </li>
-                    </ul>
-                </fieldset>
-            </form>
-            <footer>
-                <address>Copyright © 2016 NS</address>
-            </footer>
-        </aside>
+        <div class="main-wrapper">
+            <!-- Filter functie -->
+            <aside>
+                <h3 class="accordion">Filter</h3>
+                <form class="panel">
+                    <fieldset>
+                        <legend class="accordion active">Genre</legend>
+                        <ul class="panel show">
+                            <li>
+                                <input type="checkbox" id="fictie">
+                                <label class="trigger" for="fictie">Fictie</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="non-fictie">
+                                <label class="trigger" for="non-fictie">Non-fictie </label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="sport">
+                                <label class="trigger" for="sport">Sport</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="muziek">
+                                <label class="trigger" for="muziek">Muziek</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="politiek">
+                                <label class="trigger" for="politiek">Politiek</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="overig">
+                                <label class="trigger" for="overig">Overig</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="accordion active">Leesduur</legend>
+                        <ul class="panel show">
+                            <li>
+                                <input type="range" min="1" max="4" step="1" value="1">
+                                <div class="range-text">2-50 minuten</div>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="accordion active">Niveau</legend>
+                        <ul class="panel show">
+                            <li>
+                                <input type="checkbox" id="kinderen">
+                                <label class="trigger" for="kinderen">Kinderen</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="jeugd">
+                                <label class="trigger" for="jeugd">Jeugd</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="volwassenen">
+                                <label class="trigger" for="volwassenen">Volwassenen</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="show-results">Toon resultaten</button>
+                </form>
+            </aside>
+            <!-- Gebied waar alle verhalen in staan -->
+            <section class="story-wrapper">
+                <div class="search-wrapper">
+                    <form class="search-form">
+                        <input type="search" placeholder="Zoeken op naam of trefwoord" name="search" required>
+                        <button class="search-button" type="submit"></button>
+                    </form>
+                    <button class="layout-button"></button><span class="layout-text">Lay-out wijzigen</span>
+                    <div class="sort-wrapper">
+                        <span class="sorttitle">Sorteer op:</span>
+                        <select>
+                            <option value="popular">Meest populair</option>
+                            <option value="date">Nieuw</option>
+                            <option value="title">Titel A-Z</option>
+                            <option value="aanbevolen">Relevantie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="story-category">
+                    <h2 class="results">Aanbevolen voor jou</h2>
+                </div>
+                <div class="loader"></div>
+                <div class="stories">
+                    <article>
+                        <header class="article-header sportcommentaar">
+                            <button class="bookmark-button"> </button>
+                        </header>
+                        <div class="article-content">
+                            <div class="meta-data">
+                                <span class="date">28 april 2011</span>
+                                <span class="read-time">10 minuten</span>
+                            </div>
+                            <h3>Sportcommentaar</h3>
+                            <p>En daar stopt lijn 21 op exact de juiste tijd op precies de juiste plek op het Stationsplein. De deuren gaat open, de spanning is te snijden. En wie komt daar als eerste uit? Ja hoor, het is de felgroene kinderwagen waarin Molovich Jr. ligt te slapen...</p>
+                            <a href="sportcommentaar.html" class="right-arrow">Lees verder</a>
+                        </div>
+                    </article>
+                    <article>
+                        <header class="article-header twitter">
+                            <button class="bookmark-button"> </button>
+                        </header>
+                        <div class="article-content">
+                            <div class="meta-data">
+                                <span class="date">10 maart 2011</span>
+                                <span class="read-time">18 minuten</span>
+                            </div>
+                            <h3>Twitter</h3>
+                            <p>@molovich Schoenen gekocht voor Junior. Op twintig meter afstand van m’n huis. #tochnoggeslaagd #kosteenpaaruurtjesmaardanhebjeookwat 2 minutes ago @molovich In bus terug naar huis. Balen. 37 minutes ago @molovich Godverdomme...</p>
+                            <a href="twitter.html" class="right-arrow">Lees verder</a>
+                        </div>
+                    </article>
+                    <article>
+                        <header class="article-header twitter">
+                            <button class="bookmark-button"></button>
+                        </header>
+                        <div class="article-content">
+                            <div class="meta-data">
+                                <span class="date">4 mei 2011</span>
+                                <span class="read-time">5 minuten</span>
+                            </div>
+                            <h3>Recept</h3>
+                            <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag als je even niet weet wat je met het leven aan moet. Als je wel weet wat je met het leven aan moet, is dit gerecht ook heel lekker. Drinksuggestie: een krat bier...
+                            </p>
+                            <a href="recept.html" class="right-arrow">Lees verder</a>
+                        </div>
+                    </article>
+                    <article>
+                        <header class="article-header vergezocht">
+                            <button class="bookmark-button"></button>
+                        </header>
+                        <div class="article-content">
+                            <div class="meta-data">
+                                <span class="date">9 april 2011</span>
+                                <span class="read-time">15 minuten</span>
+                            </div>
+                            <h3>Vergezocht</h3>
+                            <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag als je even niet weet wat je met het leven aan moet. Als je wel weet wat je met het leven aan moet, is dit gerecht ook heel lekker. Drinksuggestie: een krat bier...
+                            </p>
+                            <a href="recept.html" class="right-arrow">Lees verder</a>
+                        </div>
+                    </article>
+                    <div class="displaymore-wrapper">
+                        <a class="display-more">Meer weergeven</a>
+                    </div>
+                    <div class="story-category">
+                        <h2>Verder lezen</h2>
+                    </div>
+                    <article>
+                        <header class="article-header vergezocht">
+                            <div class="progress-border"></div>
+                        </header>
+                        <div class="article-content">
+                            <div class="meta-data">
+                                <span class="date">9 april 2011</span>
+                                <span class="read-time">nog 5 minuten</span>
+                            </div>
+                            <h3>Vergezocht</h3>
+                            <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag als je even niet weet wat je met het leven aan moet. Als je wel weet wat je met het leven aan moet, is dit gerecht ook heel lekker. Drinksuggestie: een krat bier...
+                            </p>
+                            <a href="verhaal.html" class="right-arrow">Lees verder</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
+    <footer>
+        <ul class="list-inline">
+            <li class="right-arrow"> Gebruiksvoorwaarden</li>
+            <li class="right-arrow"> Privacybeleid</li>
+            <li class="right-arrow"> Ondersteuning</li>
+        </ul>
+    </footer>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>
